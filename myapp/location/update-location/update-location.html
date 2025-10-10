@@ -1,0 +1,37 @@
+<fieldset class="bg-success text-warning">
+    
+    <div class="container">
+        <div class="card form-card shadow bg-success">
+            <legend class="container text-center text-warning mt-5 fs-3">update Location Form</legend>
+            <form *ngIf="l.id" (ngSubmit)="updateLocation()" >
+
+                <div class="col-md-5 offset-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="l.name">
+                </div>
+                <div class="col-md-5 offset-3 mt-3">
+                    <label class="form-label">City </label>
+                    <input type="text" class="form-control" id="city" name="city" [(ngModel)]="l.city">
+                </div>
+                <div class="col-md-5 offset-3 mt-3">
+                    <label class="form-label">Photo</label>
+                    <input type="text" class="form-control" id="photo" name="photo" [(ngModel)]="l.photo">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 offset-3">
+                        <button type="submit" class="btn btn-primary m-4" >Save</button>
+                    </div>
+                    <div class="col-md-1">
+                        <button href="/allloc" class="btn btn-warning m-4">Return</button>
+                    </div>
+                </div>
+
+
+
+            </form>
+        </div>
+
+
+    </div>
+</fieldset>

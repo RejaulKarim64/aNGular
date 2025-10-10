@@ -1,0 +1,48 @@
+<fieldset class="bg-success text-warning">
+
+    <div class="container">
+        <div class="card form-card shadow bg-success">
+            <legend class="container text-center text-warning mt-5 fs-3">Update Student Form</legend>
+            <form *ngIf="student.id" (ngSubmit)="updateStudent()">
+
+                <div class="col-md-5 offset-3">
+                    <label class="form-label">Name <small class="text-danger">*</small></label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="enter name" required
+                        [(ngModel)]="student.name">
+                </div>
+                <div class="col-md-5 offset-3 mt-3">
+                    <label class="form-label">Email <small class="text-danger">*</small></label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="enter email" required
+                        [(ngModel)]="student.email">
+                </div>
+
+                <div class="col-md-5 offset-3 mt-3">
+                    <label class="form-label">Fee</label>
+                    <input type="number" class="form-control" id="fee" name="fee" [(ngModel)]="student.fee">
+                </div>
+
+                <div class="col-md-5 offset-3 mt-3">
+                    <label for="location" class="form-label">Location:</label>
+                    <select id="location" name="location" class="form-select"
+                        [(ngModel)]="student.location" [compareWith]="compareLocation">
+                        <option *ngFor="let loc of locations" [ngValue]="loc">{{loc.city}}</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 offset-3">
+                        <button type="submit" class="btn btn-primary m-4">Save</button>
+                    </div>
+                    <div class="col-md-1">
+                        <button href="/allstu" class="btn btn-warning m-4">Back</button>
+                    </div>
+                </div>
+
+
+
+            </form>
+        </div>
+
+
+    </div>
+</fieldset>

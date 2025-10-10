@@ -1,24 +1,31 @@
-<table class="table striped">
+<div class="container">
+    <table  class="table table-bordered table-hover table-striped text-center mb-3 mt-4">
 
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Fee</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let s of students |async">
-            <td>{{s.id}}</td>
-            <td>{{s.name}}</td>
-            <td>{{s.email}}</td>
-            <td>{{s.fee}}</td>
-            <td></td>
-        </tr>
-    </tbody>
+        <thead class="table-dark">
+            <tr class="">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Fee</th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of students ">
+                <td>{{s.id}}</td>
+                <td>{{s.name}}</td>
+                <td>{{s.email}}</td>
+                <td>{{s.fee|currency }}</td>
+                <td>{{s.location.city}}</td>
+                <td>
+                    <button class="btn btn-primary m-1 p-1" (click)="getStudentById(s.id)">Edit</button>
+                    <button class="btn btn-warning m-1 p-1" (click)="deleteStudent(s.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
 
 
 
-</table>
+    </table>
+</div>

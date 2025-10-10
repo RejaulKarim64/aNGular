@@ -1,5 +1,19 @@
-(ng new myapp --a-) for new project open
+(ng new myapp --no-standlaone) for new project open
 
 (npm install json-server)= for json server installation
 
 npm i = node module download and install.
+
+npx json-server db.json =  json server run
+json-server --watch db.json =  json server run
+
+ng g c addstudent= for create new folder/file
+
+ng g s service/location.service =for taking service
+
+npm install @angular/animations = for animation
+
+ng g g guard/user = for create guard
+
+npm install @fortawesome/fontawesome-free = for fontawesome
+node_modules/@fortawesome/fontawesome-free/css/all.min.css = in json

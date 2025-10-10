@@ -1,0 +1,17 @@
+/* Card hover effect */
+.welcome-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.welcome-card:hover {
+  transform: scale(1.10);
+  box-shadow: 0 15px 30px rgba(30, 216, 123, 0.801);
+}
+
+/* Button hover effect */
+.welcome-btn {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.welcome-btn:hover {
+  background-color: #73ec87; /* Darker shade of primary */
+  transform: scale(1.05);
+}

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from '../model/user.model';
+import { AuthService } from './service/auth-service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +10,19 @@ import { Component } from '@angular/core';
 })
 export class App {
   protected title = 'myapp';
+
+  userRole: string | null = '';
+  currentUser: User | null = null;
+
+  constructor(
+    private authService: AuthService,
+  ){}
+
+
+  ngOnInit(): void {
+     this.authService.currentUser$.subscribe(user => {
+      this.currentUser = user;
+      this.userRole = user?.role || null;
+    });
+  }
 }

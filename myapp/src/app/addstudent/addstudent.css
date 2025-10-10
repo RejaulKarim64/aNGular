@@ -1,0 +1,16 @@
+/* Card hover effect */
+.form-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Input hover effect */
+input.form-control:hover,
+select.form-select:hover {
+  border-color: #28a745; /* Bootstrap green */
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.4);
+}
